@@ -67,7 +67,9 @@ public class EmailValidation {
 UC1();
 UC2();
 UC3();
+UC4();
 }
+	
 	private static void UC3() {
 		// TODO Auto-generated method stub
 	     if (StringValidation(email)) {
@@ -88,6 +90,25 @@ UC3();
          // Use String.matches() to check if the input matches the regular expression
          return email.matches(regex);
      }
- 
+	private static void UC4() {
+	    String input = "bridgelabz3Le co";
 
-}
+        // Validate the string
+        if (isValidString(input)) {
+            System.out.println("String is valid");
+        } else {
+            System.out.println("String is invalid");
+        }
+    }
+
+    private static boolean isValidString1(String input) {
+        // Regular expression to match the required pattern with allowed special characters
+        String regex = "^bridgelabz3[\\p{L}0-9!@#$%^&*()-_+=<>?]+$";
+
+        // Use String.matches() to check if the input matches the regular expression
+        return input.matches(regex);
+    }
+
+	}
+
+
